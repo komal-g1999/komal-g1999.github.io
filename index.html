@@ -159,8 +159,35 @@ Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b
         </aside>
     </div>
 
+   <div class="slideshow-container">
+        <img class="slideshow" src="Images/IMG_2018.JPG" alt="Image 1">
+        <img class="slideshow" src="Images/IMG_1374.JPG" alt="Image 2">
+        <img class="slideshow" src="Images/IMG_1443.JPG" alt="Image 3">
+        <img class="slideshow" src="Images/IMG_1940.JPG" alt="Image 4">
+        <img class="slideshow" src="Images/IMG_1943.JPG" alt="Image 5">
+        <img class="slideshow" src="Images/IMG_2006.JPG" alt="Image 6">
+        <img class="slideshow" src="Images/IMG_1555.JPG" alt="Image 7">
+        <img class="slideshow" src="Images/IMG_1557.JPG" alt="Image 8">
+    </div>
+
     <footer>
         <p>&copy; 2024 Komal Goyal</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slideshow");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 </html>
