@@ -75,14 +75,17 @@
             margin-top: 20px;
             text-align: center;
         }
-        .slideshow {
+        .slideshow-group {
             display: none;
-            width: 50%; /* Adjust width to be half */
+        }
+        .slideshow {
+            width: 30%; /* Adjust width to fit three images in a row */
             height: auto;
             border-radius: 10px; /* Optional: to make the corners slightly rounded */
-            margin: 0 auto; /* Center the image */
+            margin: 0 1%; /* Adjust margin for spacing between images */
+            display: inline-block;
         }
-        .active {
+        .active-group {
             display: block;
         }
     </style>
@@ -171,14 +174,20 @@ Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b
     </div>
 
     <div class="slideshow-container">
-        <img class="slideshow active" src="Images/IMG_2018.JPG" alt="Image 1">
-        <img class="slideshow" src="Images/IMG_1374.JPG" alt="Image 2">
-        <img class="slideshow" src="Images/IMG_1443.JPG" alt="Image 3">
-        <img class="slideshow" src="Images/IMG_1940.JPG" alt="Image 4">
-        <img class="slideshow" src="Images/IMG_1943.JPG" alt="Image 5">
-        <img class="slideshow" src="Images/IMG_2006.JPG" alt="Image 6">
-        <img class="slideshow" src="Images/IMG_1555.JPG" alt="Image 7">
-        <img class="slideshow" src="Images/IMG_1557.JPG" alt="Image 8">
+        <div class="slideshow-group active-group">
+            <img class="slideshow" src="Images/IMG_2018.JPG" alt="Image 1">
+            <img class="slideshow" src="Images/IMG_1374.JPG" alt="Image 2">
+            <img class="slideshow" src="Images/IMG_1443.JPG" alt="Image 3">
+        </div>
+        <div class="slideshow-group">
+            <img class="slideshow" src="Images/IMG_1940.JPG" alt="Image 4">
+            <img class="slideshow" src="Images/IMG_1943.JPG" alt="Image 5">
+            <img class="slideshow" src="Images/IMG_2006.JPG" alt="Image 6">
+        </div>
+        <div class="slideshow-group">
+            <img class="slideshow" src="Images/IMG_1555.JPG" alt="Image 7">
+            <img class="slideshow" src="Images/IMG_1557.JPG" alt="Image 8">
+        </div>
     </div>
 
     <footer>
@@ -190,14 +199,14 @@ Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b
         showSlides();
 
         function showSlides() {
-            let slides = document.getElementsByClassName("slideshow");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
+            let groups = document.getElementsByClassName("slideshow-group");
+            for (let i = 0; i < groups.length; i++) {
+                groups[i].classList.remove("active-group");
             }
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].classList.add("active");
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            if (slideIndex > groups.length) { slideIndex = 1 }
+            groups[slideIndex - 1].classList.add("active-group");
+            setTimeout(showSlides, 2000); // Change group every 2 seconds
         }
     </script>
 </body>
