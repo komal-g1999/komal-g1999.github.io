@@ -364,28 +364,28 @@
         <p>&copy; 2024 Komal Goyal</p>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            var sections = document.getElementsByClassName('content-section');
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].classList.remove('active');
-            }
-            document.getElementById(sectionId).classList.add('active');
+   <script>
+    function showSection(sectionId) {
+        var sections = document.getElementsByClassName('content-section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('active');
         }
+        document.getElementById(sectionId).classList.add('active');
+    }
 
-        let slideIndex = 0;
-        showSlides();
+    let slideIndex = 0;
+    showSlides();
 
-        function showSlides() {
-            let groups = document.getElementsByClassName("slideshow-group");
-            for (let i = 0; i < groups.length; i++) {
-                groups[i].classList.remove("active-group");
-            }
-            slideIndex++;
-            if (slideIndex > groups.length) { slideIndex = 1 }
-            groups[slideIndex - 1].classList.add("active-group");
-            setTimeout(showSlides, 2000);
+    function showSlides() {
+        let groups = document.getElementsByClassName("slideshow-group");
+        for (let i = 0; i < groups.length; i++) {
+            groups[i].classList.remove("active-group");
         }
-    </script>
+        slideIndex++;
+        if (slideIndex >= groups.length) { slideIndex = 0 } // Fix the off-by-one issue
+        groups[slideIndex].classList.add("active-group");
+        setTimeout(showSlides, 2000);
+    }
+</script>
 </body>
 </html>
