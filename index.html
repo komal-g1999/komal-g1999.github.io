@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Komal Goyal</title>
+    <title><span style="color: red; font-style: italic;"><b>Dr. Komal Goyal</b></span></title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -15,21 +15,22 @@
         text-align: justify; /* Globally justifies text in the body */
     }
     .container {
-        display: flex;
         width: 90%;
         margin: auto;
         overflow: hidden;
+        display: block; /* Removed flex layout */
     }
     .main-content {
-        flex: 2;
         padding: 20px;
         background: #fff;
-        margin-right: 20px;
+        margin-bottom: 20px;
     }
     .sidebar {
-        flex: 1;
-        background: #fff;
-        padding: 20px;
+        display: inline-block;
+        width: auto;
+        float: right; /* Aligns image to the right side */
+        background: none;
+        padding: 0;
         text-align: center;
     }
     header {
