@@ -127,47 +127,42 @@
     html {
         scroll-behavior: smooth;
     }
-      .about, .education {
+     .about {
         display: flex;
         flex-wrap: wrap;
-        background-color: #d3d3d3; /* Light gray background for both sections */
-        padding: 20px;
         margin-bottom: 20px;
-        border-radius: 10px; /* Optional for rounded edges */
     }
 
     .about .text-content,
-    .education .text-content,
-    .about .sidebar,
-    .education .sidebar {
+    .about .sidebar {
         flex: 1;
         padding: 10px;
         box-sizing: border-box;
     }
 
-    .about .text-content,
-    .education .text-content {
-        max-width: 50%; /* Left-hand side occupies 50% */
+    .about .text-content {
+        max-width: 50%;
     }
 
-    .about .sidebar,
-    .education .sidebar {
-        max-width: 50%; /* Right-hand side occupies 50% */
-        display: flex;
-        justify-content: center; /* Horizontally centers the image */
-        align-items: center; /* Vertically centers the image */
+    .about .sidebar {
+        max-width: 50%;
+        text-align: center;
     }
 
-    .about img, .education img {
-        max-width: 60%; /* Slightly larger image */
+    .about img {
+        max-width: 80%;
         height: auto;
         border-radius: 50%;
+        margin-bottom: 10px;
     }
 
-    .about p, .education p,
-    .about ul, .education ul {
+    .about p,
+    .about ul {
         text-align: left;
-        margin: 0;
+    }
+
+    .about ul {
+        padding-left: 20px;
     }
 </style>
 </head>
