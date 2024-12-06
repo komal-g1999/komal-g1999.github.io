@@ -48,7 +48,6 @@
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-                 cursor: pointer;
         }
 
         .main-content {
@@ -58,14 +57,26 @@
         }
 
         .about {
-            display: none;
-         background-color: #d3d3d3;
-            padding: 20px;
-            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
             margin-bottom: 20px;
         }
 
-        
+        .about .text-content {
+            flex: 1;
+            padding: 10px;
+            max-width: 50%;
+            box-sizing: border-box;
+        }
+
+        .about .sidebar {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .about img {
             max-width: 70%;
             height: auto;
@@ -130,10 +141,6 @@
         <header>
             <h1><b>Dr. Komal Goyal</b></h1>
             <ul>
-                 <li><a href="#about" onclick="showSection('about')"><b>ABOUT ME</b></a></li>
-                <li><a href="#education" onclick="showSection('education')"><b>EDUCATION</b></a></li>
-                <li><a href="#research" onclick="showSection('research')"><b>RESEARCH</b></a></li>
-                <li><a href="#contact" onclick="showSection('contact')"><b>CONTACT</b></a></li>
                 <li><a href="#about"><b>ABOUT ME</b></a></li>
                 <li><a href="#honours"><b>HONOURS & AWARDS</b></a></li>
                 <li><a href="#research"><b>RESEARCH</b></a></li>
@@ -413,20 +420,28 @@
         <p>&copy; 2024 Dr. Komal Goyal.</p>
     </footer>
 </div>
-      <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.main-content');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
+   <script>
+    function showSection(sectionId) {
+    var sections = document.getElementsByClassName('content-section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+    }
+    document.getElementById(sectionId).classList.add('active');
+}
 
-            // Show the selected section
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let groups = document.getElementsByClassName("slideshow-group");
+        for (let i = 0; i < groups.length; i++) {
+            groups[i].classList.remove("active-group");
         }
-      </script>
-      </body>
+        slideIndex++;
+        if (slideIndex >= groups.length) { slideIndex = 0 } // Fix the off-by-one issue
+        groups[slideIndex].classList.add("active-group");
+        setTimeout(showSlides, 2000);
+    }
+</script>
+</body>
 </html>
