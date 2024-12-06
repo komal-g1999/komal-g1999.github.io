@@ -127,40 +127,45 @@
     html {
         scroll-behavior: smooth;
     }
-        .about {
+      .about, .education {
         display: flex;
         flex-wrap: wrap;
-        background-color: #d3d3d3; /* Light gray background */
+        background-color: #d3d3d3; /* Light gray background for both sections */
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 10px; /* Optional for rounded edges */
     }
 
     .about .text-content,
-    .about .sidebar {
+    .education .text-content,
+    .about .sidebar,
+    .education .sidebar {
         flex: 1;
         padding: 10px;
         box-sizing: border-box;
     }
 
-    .about .text-content {
+    .about .text-content,
+    .education .text-content {
         max-width: 50%; /* Left-hand side occupies 50% */
     }
 
-    .about .sidebar {
+    .about .sidebar,
+    .education .sidebar {
         max-width: 50%; /* Right-hand side occupies 50% */
-        text-align: center;
+        display: flex;
+        justify-content: center; /* Horizontally centers the image */
+        align-items: center; /* Vertically centers the image */
     }
 
-    .about img {
-        max-width: 50%; /* Reduces image to half its size */
+    .about img, .education img {
+        max-width: 60%; /* Slightly larger image */
         height: auto;
         border-radius: 50%;
-        margin: 0 auto; /* Centers the image in the sidebar */
     }
 
-    .about p,
-    .about ul {
+    .about p, .education p,
+    .about ul, .education ul {
         text-align: left;
         margin: 0;
     }
@@ -181,19 +186,24 @@
         </ul>
     </header>
 
-    <div class="main-content">
-        <section id="about" class="about">
-            <div class="text-content">
-                <h2>About Me</h2>
-                <p>This is Dr. Komal Goyal <b>(कोमल गोयल)</b>, a dedicated researcher in the field of <b>Computational Fluid Dynamics (CFD)</b>, with a keen interest in the mathematical modeling of fluid flow problems. I apply both analytical and numerical methods to deal with complex fluid flow research problems.
-                Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b>, Physics-Informed Neural Networks<b>(PINN)</b>, and <b>optimization techniques</b> to expand my research area. With over <b>4+</b> years of experience in <b>CFD</b>, I am passionate about expanding my knowledge and skills. I am always open to research collaborations and eager to engage in active learning to further my expertise in this exciting field.
-                </p>
-            </div>
-            <div class="sidebar">
-                <img src="Images/IMG_2006.JPG" alt="Dr. Komal Goyal">
-            </div>
-             </div>
-            <h3>Education</h3>
+<div class="main-content">
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="text-content">
+            <h2>About Me</h2>
+            <p>This is Dr. Komal Goyal <b>(कोमल गोयल)</b>, a dedicated researcher in the field of <b>Computational Fluid Dynamics (CFD)</b>, with a keen interest in the mathematical modeling of fluid flow problems. I apply both analytical and numerical methods to deal with complex fluid flow research problems.
+            Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b>, Physics-Informed Neural Networks<b>(PINN)</b>, and <b>optimization techniques</b> to expand my research area. With over <b>4+</b> years of experience in <b>CFD</b>, I am passionate about expanding my knowledge and skills. I am always open to research collaborations and eager to engage in active learning to further my expertise in this exciting field.
+            </p>
+        </div>
+        <div class="sidebar">
+            <img src="Images/IMG_2006.JPG" alt="Dr. Komal Goyal">
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="text-content">
+            <h2>Education</h2>
             <ul>
                 <li><b>PhD in Fluid Dynamics</b> - VIT-AP University, Andhra Pradesh, India (07, 2021-08, 2024)</li>
                 <li><b>M.Sc in Mathematics</b> - Deshbandhu College, University of Delhi, India (2019-2021)
@@ -217,8 +227,12 @@
                     </ul>
                 </li>
             </ul>
-        </section>
-   
+        </div>
+        <div class="sidebar">
+            <img src="Images/IMG_2006.JPG" alt="Dr. Komal Goyal">
+        </div>
+    </section>
+</div>   
 
             <section id="honours" class="content-section">
                 <h2>Honours and Awards</h2>
