@@ -5,126 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Komal Goyal's webpage</title>
 <style>
-    body {
-        font-family: Times New Roman, Times New Roman;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-        text-align: justify; /* Globally justifies text in the body */
-    }
-    .container {
-        width: 90%;
-        margin: auto;
-        overflow: hidden;
-        display: block; /* Removed flex layout */
-    }
-    .main-content {
-        padding: 20px;
-        background: #fff;
+    .about {
+        display: flex;
+        flex-wrap: wrap;
         margin-bottom: 20px;
     }
-    .sidebar {
-        display: inline-block;
-        width: auto
-        float: right; /* Aligns image to the right side */
-        background: none;
-        padding: 0;
+
+    .about .text-content,
+    .about .sidebar {
+        flex: 1;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .about .text-content {
+        max-width: 50%;
+    }
+
+    .about .sidebar {
+        max-width: 50%;
         text-align: center;
     }
-    .about-me {
-        overflow: hidden; /* Ensures proper alignment */
-    }
-    header {
-        background: url('background-image.jpg') no-repeat center center/cover; 
-        color: #333;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-        color: none
-    }
-    header ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-    }
-    header li {
-        margin: 0 15px;
-    }
-    header a {
-        color: #333
-        text-decoration: none;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
-    footer {
-        padding: 20px;
-        margin-top: 20px;
-        color: #fff;
-        background-color: #333;
-        text-align: center;
-    }
-    img {
-        max-width: 100%;
+
+    .about img {
+        max-width: 80%;
         height: auto;
         border-radius: 50%;
-        margin-top: 20px;
+        margin-bottom: 10px;
     }
-    .slideshow-container {
-        position: relative;
-        max-width: 100%;
-        margin: auto;
-        margin-top: 20px;
-        text-align: center;
+
+    .about p,
+    .about ul {
+        text-align: left;
     }
-    .slideshow-group {
-        display: none;
-    }
-    .slideshow {
-        width: 30%;
-        height: auto;
-        border-radius: 10px;
-        margin: 0 1%;
-        display: inline-block;
-    }
-    .active-group {
-        display: block;
-    }
-    .social-links img {
-        width: 20px; /* Smaller size for symbols */
-        height: auto;
-        margin: 5px;
-        filter: grayscale(100%); /* Makes icons light grey */
-    }
-    .social-links a {
-        display: inline-block; /* Aligns all links in one line */
-        margin: 0 5px;
-        vertical-align: left;
-    }
-    .social-links:hover img {
-        filter: grayscale(0%); /* Restores color on hover */
-    }
-    .content-section:hover {
-        background-color: #f0f8ff;
-        border-left: 4px solid #007BFF;
-        padding-left: 10px;
-        transition: background-color 0.3s, padding 0.3s;
-    }
-    .content-section.active {
-        display: block;
-    }
-    /* Ensure all paragraphs and lists are justified */
-    p, ul, ol {
-        text-align: justify;
-    }
-    /* Smooth scroll for navigation */
-    html {
-        scroll-behavior: smooth;
+
+    .about ul {
+        padding-left: 20px;
     }
 </style>
 </head>
@@ -143,51 +59,49 @@
     </header>
 
         <div class="main-content">
-            <section id="about" class="about">
-  <div class="text-content">
-                <h2>About Me</h2>
-                <p>This is Dr. Komal Goyal <b>(कोमल गोयल)</b>, a dedicated researcher in the field of <b>Computational Fluid Dynamics (CFD)</b>, with a keen interest in the mathematical modeling of fluid flow problems. I apply both analytical and numerical methods to deal with complex fluid flow research problems.
-                Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b>, Physics-Informed Neural Networks<b>(PINN)</b>, and <b>optimization techniques</b> to expand my research area. With over <b>4+</b> years of experience in <b>CFD</b>, I am passionate about expanding my knowledge and skills. I am always open to research collaborations and eager to engage in active learning to further my expertise in this exciting field.
-                </p>
-      </div>
-            <div class="sidebar">
-                <img src="Images/IMG_2006.JPG" alt="Dr, Komal Goyal">
-                <p>Dr. Komal Goyal<br>
-Assistant Professor,<br> 
-Department of Management Studies,<br> 
-Galgotias Institute of Mangemament and Technology,<br> 
-Greater Noida, Uttar Pradesh-201310,<br>
-India.<br>
-<b>Email Address</b>: komalgoelresearch@gmail.com, komal.goyal@galgotiacollege.edu</p>
-            </div>
-        
-                <p><b>Education</b></p>
-                 <ul>
-                    <li><b>PhD in Fluid Dynamics</b> - VIT-AP University, Andhra Pradesh, India (07, 2021-08, 2024)</li>
-                    <li><b>M.Sc in Mathematics</b> - Deshbandhu College, University of Delhi, India (2019-2021)
-                        <ul>
-                            <li>Secured a CGPA of 8.429 (aggregate of I and II years)</li>
-                        </ul>
-                    </li>
-                    <li><b>B.Sc (Hons) in Mathematics</b> - Deshbandhu College, University of Delhi, India (2016-2019)
-                        <ul>
-                            <li>Secured a CGPA of 8.676 (aggregate of I, II, III years)</li>
-                        </ul>
-                    </li>
-                   
-                    <li><b>Senior Secondary (XII) Certificate</b> - CBSE (Central Board of Secondary Education)
-                        <ul>
-                            <li>Secured 86.6% marks</li>
-                        </ul>
-                    </li>
-                    <li><b>Secondary (X) Certificate</b> - CBSE (Central Board of Secondary Education)
-                        <ul>
-                            <li>Secured 7.4 CGPA</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
+    <section id="about" class="about">
+        <div class="text-content">
+            <h2>About Me</h2>
+            <p>This is Dr. Komal Goyal <b>(कोमल गोयल)</b>, a dedicated researcher in the field of <b>Computational Fluid Dynamics (CFD)</b>, with a keen interest in the mathematical modeling of fluid flow problems. I apply both analytical and numerical methods to deal with complex fluid flow research problems.
+            Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b>, Physics-Informed Neural Networks<b>(PINN)</b>, and <b>optimization techniques</b> to expand my research area. With over <b>4+</b> years of experience in <b>CFD</b>, I am passionate about expanding my knowledge and skills. I am always open to research collaborations and eager to engage in active learning to further my expertise in this exciting field.
+            </p>
+            <h3>Education</h3>
+            <ul>
+                <li><b>PhD in Fluid Dynamics</b> - VIT-AP University, Andhra Pradesh, India (07, 2021-08, 2024)</li>
+                <li><b>M.Sc in Mathematics</b> - Deshbandhu College, University of Delhi, India (2019-2021)
+                    <ul>
+                        <li>Secured a CGPA of 8.429 (aggregate of I and II years)</li>
+                    </ul>
+                </li>
+                <li><b>B.Sc (Hons) in Mathematics</b> - Deshbandhu College, University of Delhi, India (2016-2019)
+                    <ul>
+                        <li>Secured a CGPA of 8.676 (aggregate of I, II, III years)</li>
+                    </ul>
+                </li>
+                <li><b>Senior Secondary (XII) Certificate</b> - CBSE (Central Board of Secondary Education)
+                    <ul>
+                        <li>Secured 86.6% marks</li>
+                    </ul>
+                </li>
+                <li><b>Secondary (X) Certificate</b> - CBSE (Central Board of Secondary Education)
+                    <ul>
+                        <li>Secured 7.4 CGPA</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <img src="Images/IMG_2006.JPG" alt="Dr. Komal Goyal">
+            <p><b>Dr. Komal Goyal</b><br>
+            Assistant Professor,<br> 
+            Department of Management Studies,<br> 
+            Galgotias Institute of Management and Technology,<br> 
+            Greater Noida, Uttar Pradesh-201310,<br>
+            India.<br>
+            <b>Email Address</b>: komalgoelresearch@gmail.com, komal.goyal@galgotiacollege.edu</p>
+        </div>
+    </section>
+</div>
             <section id="honours" class="content-section">
                 <h2>Honours and Awards</h2>
                 <ul>
