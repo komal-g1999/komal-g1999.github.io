@@ -90,9 +90,18 @@
         display: block;
     }
     .social-links img {
-        width: 25%;
+        width: 20px; /* Smaller size for symbols */
         height: auto;
         margin: 5px;
+        filter: grayscale(100%); /* Makes icons light grey */
+    }
+    .social-links a {
+        display: inline-block; /* Aligns all links in one line */
+        margin: 0 5px;
+        vertical-align: middle;
+    }
+    .social-links:hover img {
+        filter: grayscale(0%); /* Restores color on hover */
     }
     .content-section:hover {
         background-color: #f0f8ff;
@@ -346,14 +355,14 @@
 
         <aside class="sidebar">
             <img src="Images/IMG_2006.JPG" alt="Dr, Komal Goyal">
-            <h2>Dr. Komal Goyal</h2>
+            <h2><b>Welcome to my world of Research and Academia!!</b></h2>
             <p>Dr. Komal Goyal<br>
 Assistant Professor,<br> 
 Department of Management Studies,<br> 
 Galgotias Institute of Mangemament and Technology,<br> 
 Greater Noida, Uttar Pradesh-201310,<br>
 India.<br>
-Email Address: komalgoelresearch@gmail.com, komal.goyal@galgotiacollege.edu</p>
+<b>Email Address</b>: komalgoelresearch@gmail.com, komal.goyal@galgotiacollege.edu</p>
 
             <div class="social-links">
                 <a href="mailto:komalgoelresearch@gmail.com"><img src="Images/email_logo.png" alt="Email"></a>
