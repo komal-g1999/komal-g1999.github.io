@@ -4,105 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Komal Goyal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            display: flex;
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .main-content {
-            flex: 2;
-            padding: 20px;
-            background: #fff;
-            margin-right: 20px;
-        }
-        .sidebar {
-            flex: 1;
-            background: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-        header li {
-            margin: 0 15px;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        footer {
-            padding: 20px;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #333;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            margin-top: 20px;
-            text-align: center;
-        }
-        .slideshow-group {
-            display: none;
-        }
-        .slideshow {
-            width: 30%;
-            height: auto;
-            border-radius: 10px;
-            margin: 0 1%;
-            display: inline-block;
-        }
-        .active-group {
-            display: block;
-        }
-        .social-links img {
-            width: 25%;
-            height: auto;
-            margin: 5px;
-        }
-        .content-section:hover {
-    background-color: #f0f8ff;
-    border-left: 4px solid #007BFF;
-    padding-left: 10px;
-    transition: background-color 0.3s, padding 0.3s;
-}
-        .content-section.active {
-            display: block;
-        }
-    </style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: justify; /* Globally justifies text in the body */
+    }
+    .container {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .main-content {
+        flex: 2;
+        padding: 20px;
+        background: #fff;
+        margin-right: 20px;
+    }
+    .sidebar {
+        flex: 1;
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    header {
+        background: #333;
+        color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+    }
+    header ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    header li {
+        margin: 0 15px;
+    }
+    header a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    footer {
+        padding: 20px;
+        margin-top: 20px;
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+    .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .slideshow-group {
+        display: none;
+    }
+    .slideshow {
+        width: 30%;
+        height: auto;
+        border-radius: 10px;
+        margin: 0 1%;
+        display: inline-block;
+    }
+    .active-group {
+        display: block;
+    }
+    .social-links img {
+        width: 25%;
+        height: auto;
+        margin: 5px;
+    }
+    .content-section:hover {
+        background-color: #f0f8ff;
+        border-left: 4px solid #007BFF;
+        padding-left: 10px;
+        transition: background-color 0.3s, padding 0.3s;
+    }
+    .content-section.active {
+        display: block;
+    }
+    /* Ensure all paragraphs and lists are justified */
+    p, ul, ol {
+        text-align: justify;
+    }
+</style>
 </head>
 <body>
     <header>
