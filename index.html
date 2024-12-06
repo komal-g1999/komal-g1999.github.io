@@ -27,14 +27,17 @@
     }
     .sidebar {
         display: inline-block;
-        width: auto;
+        width: 30%; /* Adjusted width for better alignment */
         float: right; /* Aligns image to the right side */
         background: none;
         padding: 0;
         text-align: center;
     }
+    .about-me {
+        overflow: hidden; /* Ensures proper alignment */
+    }
     header {
-        background: #333;
+        background: url('background-image.jpg') no-repeat center center/cover; /* Adds background image */
         color: #fff;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -56,6 +59,7 @@
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
+        cursor: pointer;
     }
     footer {
         padding: 20px;
@@ -116,6 +120,10 @@
     /* Ensure all paragraphs and lists are justified */
     p, ul, ol {
         text-align: justify;
+    }
+    /* Smooth scroll for navigation */
+    html {
+        scroll-behavior: smooth;
     }
 </style>
 </head>
@@ -380,27 +388,47 @@ India.<br>
         </aside>
     </div>
 
-    <div class="slideshow-container">
-        <div class="slideshow-group active-group">
-            <img class="slideshow" src="Images/IMG_2018.JPG" alt="Image 1">
-            <img class="slideshow" src="Images/IMG_1374.JPG" alt="Image 2">
-            <img class="slideshow" src="Images/IMG_1443.JPG" alt="Image 3">
-        </div>
-        <div class="slideshow-group">
-           <img class="slideshow" src="Images/IMG_1555.JPG" alt="Image 7"> 
-            <img class="slideshow" src="Images/IMG_1943.JPG" alt="Image 5">
-            <img class="slideshow" src="Images/IMG_2006.JPG" alt="Image 6">
-        </div>
-     
-            
-           
-        </div>
+<div class="container">
+    <header>
+        <h1>My Title</h1>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="main-content">
+        <section id="about-me" class="about-me">
+            <div class="text-content">
+                <h2>About Me</h2>
+                <p>Welcome to my webpage! Here you will find information about my background, skills, and projects.</p>
+            </div>
+            <div class="sidebar">
+                <img src="profile-image.jpg" alt="Profile Picture">
+                <p>Qualifications: PhD in Computer Science</p>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming</li>
+                <li>Data Analysis</li>
+                <li>Web Development</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p>Email: example@example.com</p>
+        </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Komal Goyal</p>
+        <p>&copy; 2024 My Name</p>
     </footer>
-
+</div>
    <script>
     function showSection(sectionId) {
     var sections = document.getElementsByClassName('content-section');
