@@ -96,7 +96,7 @@
         display: block;
     }
     .social-links img {
-        width: 10px; /* Smaller size for symbols */
+        width: 20px; /* Smaller size for symbols */
         height: auto;
         margin: 5px;
         filter: grayscale(100%); /* Makes icons light grey */
@@ -129,26 +129,38 @@
 </style>
 </head>
 <body>
+<div class="container">
     <header>
         <h1><b>Dr. Komal Goyal</b></h1>
         <ul>
-            <li><a href="#" onclick="showSection('about')"><b>ABOUT ME</b></a></li>
-            <li><a href="#" onclick="showSection('honours')"><b>HONOURS & AWARDS</b></a></li>
-            <li><a href="#" onclick="showSection('research')"><b>RESEARCH</b></a></li>
-            <li><a href="#" onclick="showSection('teaching experience')"><b>TEACHING EXPERIENCE</b></a></li>
-            <li><a href="#" onclick="showSection('conferences')"><b>CONFERENCES/WORKSHOPS/FDPs</b></a></li>
-            <li><a href="#" onclick="showSection('skills')"><b>SKILLS & TEACHING INTERESTS</b></a></li>
+            <li><a href="#about"><b>ABOUT ME</b></a></li>
+            <li><a href="#honours"><b>HONOURS & AWARDS</b></a></li>
+            <li><a href="#research"><b>RESEARCH</b></a></li>
+            <li><a href="#teaching experience"><b>TEACHING EXPERIENCE</b></a></li>
+            <li><a href="#conferences"><b>CONFERENCES/WORKSHOPS/FDPs</b></a></li>
+            <li><a href="#skills"><b>SKILLS & TEACHING INTERESTS</b></a></li>
         </ul>
     </header>
 
-    <div class="container">
         <div class="main-content">
-            <section id="about" class="content-section active">
+            <section id="about" class="about">
+  <div class="text-content">
                 <h2>About Me</h2>
                 <p>This is Dr. Komal Goyal <b>(कोमल गोयल)</b>, a dedicated researcher in the field of <b>Computational Fluid Dynamics (CFD)</b>, with a keen interest in the mathematical modeling of fluid flow problems. I apply both analytical and numerical methods to deal with complex fluid flow research problems.
                 Currently, I am delving into the realms of Artificial Neural Networks<b>(ANN)</b>, Physics-Informed Neural Networks<b>(PINN)</b>, and <b>optimization techniques</b> to expand my research area. With over <b>4+</b> years of experience in <b>CFD</b>, I am passionate about expanding my knowledge and skills. I am always open to research collaborations and eager to engage in active learning to further my expertise in this exciting field.
                 </p>
-
+      </div>
+            <div class="sidebar">
+                <img src="Images/IMG_2006.JPG" alt="Dr, Komal Goyal">
+                <p>Dr. Komal Goyal<br>
+Assistant Professor,<br> 
+Department of Management Studies,<br> 
+Galgotias Institute of Mangemament and Technology,<br> 
+Greater Noida, Uttar Pradesh-201310,<br>
+India.<br>
+<b>Email Address</b>: komalgoelresearch@gmail.com, komal.goyal@galgotiacollege.edu</p>
+            </div>
+        
                 <p><b>Education</b></p>
                  <ul>
                     <li><b>PhD in Fluid Dynamics</b> - VIT-AP University, Andhra Pradesh, India (07, 2021-08, 2024)</li>
@@ -331,14 +343,6 @@
         <li>R Software</li>
         <li>Microsoft PowerPoint</li>
 
-        <h3>Teaching Experience</h3>
-    <p>VIT-AP University, Amravati, Andhra Pradesh, India<br>07/2021 - Present</p>
-    <ul>
-        <li>As a teaching assistant for first-year B-Tech students, I effectively utilized MATLAB as an instructional tool for the course "Calculus for Engineers."</li>
-        <li>Demonstrated fundamental calculus concepts, including differentiation, integration, and solving differential equations, using MATLAB’s built-in functions like "diff," "int," and "ode45."</li>
-        <li>Established positive relationships with students, parents, fellow teachers, and school administrators.</li>
-    </ul>
-
     <h3>Teaching Interests</h3>
     <ul>
         <li>Real Analysis</li>
@@ -389,42 +393,7 @@ India.<br>
         </aside>
     </div>
 
-<div class="container">
-    <header>
-        <h1>My Title</h1>
-        <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
 
-    <div class="main-content">
-        <section id="about-me" class="about-me">
-            <div class="text-content">
-                <h2>About Me</h2>
-                <p>Welcome to my webpage! Here you will find information about my background, skills, and projects.</p>
-            </div>
-            <div class="sidebar">
-                <img src="profile-image.jpg" alt="Profile Picture">
-                <p>Qualifications: PhD in Computer Science</p>
-            </div>
-        </section>
-
-        <section id="skills" class="content-section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming</li>
-                <li>Data Analysis</li>
-                <li>Web Development</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="content-section">
-            <h2>Contact</h2>
-            <p>Email: example@example.com</p>
-        </section>
-    </div>
 
     <footer>
         <p>&copy; 2024 My Name</p>
