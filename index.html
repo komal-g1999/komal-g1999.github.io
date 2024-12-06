@@ -93,9 +93,12 @@
             height: auto;
             margin: 5px;
         }
-        .content-section {
-            display: none;
-        }
+        .content-section:hover {
+    background-color: #f0f8ff;
+    border-left: 4px solid #007BFF;
+    padding-left: 10px;
+    transition: background-color 0.3s, padding 0.3s;
+}
         .content-section.active {
             display: block;
         }
@@ -294,34 +297,12 @@
         <li>R Software</li>
         <li>Microsoft PowerPoint</li>
     </ul>
-
-    <h3>Teaching Experience</h3>
-    <p>VIT-AP University, Amravati, Andhra Pradesh, India<br>07/2021 - Present</p>
-    <ul>
-        <li>As a teaching assistant for first-year B-Tech students, I effectively utilized MATLAB as an instructional tool for the course "Calculus for Engineers."</li>
-        <li>Demonstrated fundamental calculus concepts, including differentiation, integration, and solving differential equations, using MATLAB’s built-in functions like "diff," "int," and "ode45."</li>
-        <li>Established positive relationships with students, parents, fellow teachers, and school administrators.</li>
-    </ul>
-
-    <h3>Teaching Interests</h3>
-    <ul>
-        <li>Real Analysis</li>
-        <li>Complex Analysis</li>
-        <li>Ordinary Differential Equations (ODEs)</li>
-        <li>Partial Differential Equations (PDEs)</li>
-        <li>Numerical Methods</li>
-    </ul>
-
-    <h3>Extra-Curricular Activities</h3>
-    <ul>
-        <li>Participated in International QuizHunt for the "Smartan Brigade" Season-2 in 2015.</li>
-        <li>Secured 1st Position in U-19 Volleyball in the 5th Inter Sports Championship.</li>
-        <li>Secured 1st Position in KABADDI at the Annual Sports Festival in 2016-2017 at Deshbandhu College, University of Delhi.</li>
-        <li>Secured 2nd Position in Tug of War at the Annual Sports Festival in 2016-2017 at Deshbandhu College, University of Delhi.</li>
-        <li>Secured 1st Position in KABADDI at the Annual Sports Festival in 2017-2018 at Deshbandhu College, University of Delhi.</li>
-    </ul>
 </section>
-        </div>
+<script>
+    document.getElementById('skills-teaching').addEventListener('click', function () {
+        showSection('skills-teaching');
+    });
+</script>        </div>
 
         <aside class="sidebar">
             <img src="Images/IMG_2006.JPG" alt="Komal Goyal">
