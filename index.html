@@ -134,24 +134,30 @@
             color: #fff;
             text-align: center;
         }
-        /* ===== About + Education equal height ===== */
-.about-education-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+.about {
+    display: flex;
     gap: 20px;
-    align-items: stretch;
+    margin-bottom: 20px;
 }
 
-/* ===== About section images stacked ===== */
-.about-images {
+.about .text-content {
+    flex: 1;
+}
+
+.about .sidebar {
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+}
+
+.about-images {
+    flex-direction: column;
 }
 
 .about-images img {
-    max-width: 70%;
+    max-width: 75%;
 }
 
         
@@ -174,8 +180,6 @@
 
         <div class="main-content">
 
-    <!-- About + Education Wrapper -->
-    <div class="about-education-wrapper">
          <section id="about" class="about">
                 <div class="text-content">
                     <h2>About Me</h2>
@@ -191,7 +195,6 @@
                 </div>
                 <div class="sidebar">
                     <img src="Images/IMG_2006.JPG" alt="Dr. Komal Goyal">
-                    <img src="Images/4.jpeg" alt="Dr. Komal Goyal">
                 </div>
             </section>
 
@@ -222,9 +225,11 @@
                             </ul>
                         </li>
                     </ul>
+                      <div class="sidebar about-images">
+        <img src="Images/4.jpeg" alt="Education Image">
+    </div>
                 </div>
             </section>
-          </div>
         </div>
         
             <section id="honours" class="content-section">
