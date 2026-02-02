@@ -134,6 +134,27 @@
             color: #fff;
             text-align: center;
         }
+        /* ===== About + Education equal height ===== */
+.about-education-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* ===== About section images stacked ===== */
+.about-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-images img {
+    max-width: 70%;
+}
+
+        
     </style>
 </head>
 <body>
@@ -152,8 +173,10 @@
         </header>
 
         <div class="main-content">
-            <!-- About Me Section -->
-            <section id="about" class="about">
+
+    <!-- About + Education Wrapper -->
+    <div class="about-education-wrapper">
+         <section id="about" class="about">
                 <div class="text-content">
                     <h2>About Me</h2>
                     <p>This is Dr. Komal Goyal <b>(डॉ। कोमल गोयल)</b>, a dedicated researcher in the field of <b>Computational Fluid Dynamics (CFD)</b>, with a keen interest in the mathematical modeling of fluid flow problems. I apply both analytical and numerical methods to deal with complex fluid flow research problems.</p>
@@ -168,6 +191,7 @@
                 </div>
                 <div class="sidebar">
                     <img src="Images/IMG_2006.JPG" alt="Dr. Komal Goyal">
+                    <img src="Images/4.jpeg" alt="Dr. Komal Goyal">
                 </div>
             </section>
 
@@ -200,6 +224,7 @@
                     </ul>
                 </div>
             </section>
+          </div>
         </div>
         
             <section id="honours" class="content-section">
