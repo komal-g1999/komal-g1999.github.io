@@ -56,33 +56,6 @@
             border-radius: 10px;
         }
 
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .about .text-content {
-            flex: 1;
-            padding: 10px;
-            max-width: 50%;
-            box-sizing: border-box;
-        }
-
-        .about .sidebar {
-            flex: 1;
-            max-width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .about img {
-            max-width: 70%;
-            height: auto;
-            border-radius: 0; /* Makes the image square */
-        }
-
         .education {
             margin-top: 20px;
             background-color: #fff; /* White background for Education section */
@@ -153,7 +126,9 @@
 }
 
 .about-images {
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .about-images img {
@@ -199,7 +174,7 @@
             </section>
 
             <!-- Education Section -->
-            <section id="education" class="education">
+            <section id="education" class="about education">
                 <div class="text-content">
                     <h2>Education</h2>
                     <ul>
