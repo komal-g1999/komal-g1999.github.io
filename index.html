@@ -92,13 +92,16 @@
             text-align: center;
         }
 
-        .slideshow {
-            width: 20%; /* Reduced the size of slideshow images */
-            height: auto;
-            border-radius: 10px;
-            margin: 0 1%;
-            display: inline-block;
-        }
+       /* Uniform size for all slideshow images */
+.slideshow {
+    width: 200px;        /* same width for all */
+    height: 150px;       /* same height for all */
+    object-fit: cover;   /* fills box evenly */
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
 
         
         footer {
